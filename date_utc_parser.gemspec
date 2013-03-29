@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = DateUtcParser::VERSION
   s.authors     = ["Matt Simpson"]
   s.email       = ["matt.simpson3@gmail.com"]
-  s.homepage    = "http://github.com/ionicmobile/date_utc_parser"
+  s.homepage    = "http://github.com/coffeencoke/date_utc_parser"
   s.summary     = %q{Make working with UTC Time more fun}
   s.description = %q{Takes an object and returns the equivalent UTC Time object}
   s.files = Dir.glob("lib/**/*") + %w(LICENSE README.md)
