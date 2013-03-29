@@ -1,8 +1,6 @@
 require 'ruby-debug'
 require_relative '../../lib/date_utc_parser'
 require 'time'
-require 'active_support/core_ext/numeric/time'
-require 'active_support/core_ext/time/zones'
 require 'active_support/core_ext/date/calculations'
 
 describe DateUtcParser, "Parsing:" do
@@ -60,7 +58,7 @@ describe DateUtcParser, "Parsing:" do
     end
 
     context 'and is a utc time with zone object' do
-      let(:date) { 2.weeks.ago }
+      let(:date) { Time.now }
 
       before do
         Time.zone = 'UTC'
