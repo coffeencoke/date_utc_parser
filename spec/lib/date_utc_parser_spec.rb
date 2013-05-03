@@ -1,7 +1,6 @@
 require 'ruby-debug'
 require_relative '../../lib/date_utc_parser'
 require 'time'
-require 'active_support/core_ext/date/calculations'
 
 describe DateUtcParser, "Parsing:" do
   subject { described_class.parse(date) }
@@ -58,14 +57,9 @@ describe DateUtcParser, "Parsing:" do
     end
 
     context 'and is a utc time with zone object' do
-      let(:date) { Time.now }
-
-      before do
-        Time.zone = 'UTC'
-      end
+      let(:date) { Time.local(2000, "jan", 1, 20, 15, 1) }
 
       it 'converts it to a standard utc time object' do
-        subject.should_not be_a(ActiveSupport::TimeWithZone)
         subject.should be_utc
       end
     end

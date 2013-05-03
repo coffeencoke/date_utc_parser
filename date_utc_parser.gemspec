@@ -14,11 +14,9 @@ Gem::Specification.new do |s|
   s.test_files = Dir.glob('spec/**/*.rb')
   s.license = "MIT"
   s.require_paths = ["lib"]
-  s.required_ruby_version = "~> 1.9.2"
+  s.required_ruby_version = ">= 1.9"
 
-  s.add_dependency "active_support", "~> 3.0"
   s.add_development_dependency "rspec", "2.10.0"
   s.add_development_dependency('rake', '~> 0.9')
   s.add_development_dependency "debugger", "~> 1.2"
-  s.add_development_dependency "tzinfo"
 end
